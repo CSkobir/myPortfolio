@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MD Hasibul Hassan KOBIR | Software Engineer & CSE Undergrad</title>
-  <meta name="description" content="Portfolio of MD Hasibul Hassan KOBIR - Computer Science & Engineering Undergraduate at UIU. Full-Stack Developer specializing in Java, Spring Boot, and Web Technologies." />
-  <meta name="keywords" content="Hasibul Hassan Kobir, MD Hasibul Hassan KOBIR, Portfolio, Software Engineer, Junior Developer, Java, Spring Boot, Full Stack, UIU, Dhaka" />
+  <title>Hasibul Hassan Kobir - Portfolio</title>
+  <meta name="description"
+    content="Portfolio of MD Hasibul Hassan KOBIR — CSE undergraduate at UIU with 3.77 CGPA. Full-Stack Developer specialising in Java, Spring Boot, React, and scalable web systems." />
+  <meta name="keywords"
+    content="Hasibul Hassan Kobir, MD Hasibul Hassan KOBIR, Portfolio, Software Engineer, Junior Developer, Java, Spring Boot, Full Stack, UIU, Dhaka" />
   <meta name="author" content="MD Hasibul Hassan KOBIR" />
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- Critical: Preload profile image for fast LCP -->
+  <link rel="preload" as="image" href="assets/profile.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (preconnect for speed) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800&display=swap"
+    rel="stylesheet" />
 
-  <!-- FontAwesome 6 for modern tech icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- FontAwesome 6 — deferred so it doesn't block render -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </noscript>
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#hero" class="logo">dev<span>Kobir</span></a>
-      
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -49,7 +61,7 @@
   <!-- Hero Section -->
   <header id="hero" class="hero-section">
     <div class="hero-container">
-      
+
       <!-- Hero Left: Text & Actions -->
       <div class="hero-content">
         <!-- Status Badge -->
@@ -60,13 +72,13 @@
         <h3>Hello, I'm</h3>
         <h1 class="hero-name">MD Hasibul Hassan KOBIR</h1>
         <h2 class="hero-role">Computer Science & Engineering Student | Aspiring Software Engineer</h2>
-        
+
         <p class="hero-bio">
-          Undergraduate at United International University maintaining a <strong>3.77 CGPA</strong>. 
-          Passionate about building robust backend architectures with <strong>Java & Spring Boot</strong>, 
+          Undergraduate at United International University maintaining a <strong>3.77 CGPA</strong>.
+          Passionate about building robust backend architectures with <strong>Java & Spring Boot</strong>,
           modern full-stack web applications, and scalable software systems.
         </p>
-        
+
         <!-- Primary Action Buttons including Resume -->
         <div class="hero-buttons">
           <a href="#projects" class="btn primary-btn">
@@ -84,7 +96,8 @@
           <a href="https://github.com/CSkobir" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/Hasibul-Hassan-Kobir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <a href="https://linkedin.com/in/Hasibul-Hassan-Kobir" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn Profile">
             <i class="fab fa-linkedin"></i>
           </a>
           <a href="mailto:Kobirhassan5152@gmail.com" aria-label="Send Email">
@@ -102,12 +115,8 @@
 
           <!-- Central Profile Circle -->
           <div class="profile-circle">
-            <img 
-              src="assets/profile.jpg" 
-              alt="MD Hasibul Hassan KOBIR" 
-              id="profile-img" 
-              onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';" 
-            />
+            <img src="assets/profile.jpg" alt="MD Hasibul Hassan KOBIR" id="profile-img" fetchpriority="high"
+              decoding="async" onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';" />
           </div>
 
           <!-- Encircling Tech Badges (12 Core Technologies) -->
@@ -125,16 +134,18 @@
           </div>
           <div class="tech-orbit-item tech-next" title="Next.js">
             <svg class="next-svg-icon" width="13" height="13" viewBox="0 0 180 180" fill="none">
-              <circle cx="90" cy="90" r="90" fill="white"/>
-              <path d="M149.5 157.5L69.1 54H54v72h12.1V69.4l73.9 95.4c3.3-2.2 6.5-4.6 9.5-7.3z" fill="black"/>
-              <rect x="115" y="54" width="12" height="72" fill="black"/>
+              <circle cx="90" cy="90" r="90" fill="white" />
+              <path d="M149.5 157.5L69.1 54H54v72h12.1V69.4l73.9 95.4c3.3-2.2 6.5-4.6 9.5-7.3z" fill="black" />
+              <rect x="115" y="54" width="12" height="72" fill="black" />
             </svg>
             <span>Next.js</span>
           </div>
           <div class="tech-orbit-item tech-ts" title="TypeScript">
             <svg class="ts-svg-icon" width="13" height="13" viewBox="0 0 128 128">
-              <rect width="128" height="128" rx="16" fill="#3178C6"/>
-              <path d="M72.5 86.8c1.3 2.5 3.3 4.5 5.9 5.8 2.6 1.3 5.7 2 9.2 2 3.3 0 6.2-.6 8.6-1.8 2.4-1.2 4.2-2.9 5.4-5.2 1.2-2.3 1.8-5 1.8-8.1 0-2.8-.6-5.2-1.7-7.2-1.1-2-2.7-3.6-4.7-4.8s-4.6-2.3-7.7-3.4c-2.4-.8-4.3-1.6-5.8-2.4-1.5-.8-2.6-1.7-3.4-2.8-.8-1.1-1.2-2.4-1.2-4 0-1.8.5-3.3 1.5-4.5 1-1.2 2.4-2.1 4.1-2.7 1.7-.6 3.7-.9 5.8-.9 2.5 0 4.8.4 6.8 1.3 2 1 3.5 2.4 4.5 4.3l9.8-6.1c-1.8-3.1-4.4-5.5-7.7-7.2-3.3-1.7-7.6-2.5-12.8-2.5-4.7 0-8.9.9-12.4 2.6-3.5 1.7-6.2 4.2-8.1 7.4-1.9 3.2-2.8 7-2.8 11.4 0 4.3.9 8 2.7 11 1.8 3 4.3 5.4 7.5 7.1 3.2 1.7 6.9 3.2 11.1 4.5 2.6.8 4.7 1.7 6.4 2.6 1.7 1 3 2.1 3.8 3.4.8 1.3 1.3 2.9 1.3 4.8 0 2.2-.6 4-1.9 5.5-1.3 1.5-3.1 2.6-5.3 3.3-2.2.7-4.8 1.1-7.7 1.1-3.7 0-6.9-.7-9.7-2.1s-4.9-3.5-6.4-6.3l-10.4 6.3zM49.4 48.7H13.6v12h14.5v54.7h13.4V60.7h7.9v-12z" fill="#FFF"/>
+              <rect width="128" height="128" rx="16" fill="#3178C6" />
+              <path
+                d="M72.5 86.8c1.3 2.5 3.3 4.5 5.9 5.8 2.6 1.3 5.7 2 9.2 2 3.3 0 6.2-.6 8.6-1.8 2.4-1.2 4.2-2.9 5.4-5.2 1.2-2.3 1.8-5 1.8-8.1 0-2.8-.6-5.2-1.7-7.2-1.1-2-2.7-3.6-4.7-4.8s-4.6-2.3-7.7-3.4c-2.4-.8-4.3-1.6-5.8-2.4-1.5-.8-2.6-1.7-3.4-2.8-.8-1.1-1.2-2.4-1.2-4 0-1.8.5-3.3 1.5-4.5 1-1.2 2.4-2.1 4.1-2.7 1.7-.6 3.7-.9 5.8-.9 2.5 0 4.8.4 6.8 1.3 2 1 3.5 2.4 4.5 4.3l9.8-6.1c-1.8-3.1-4.4-5.5-7.7-7.2-3.3-1.7-7.6-2.5-12.8-2.5-4.7 0-8.9.9-12.4 2.6-3.5 1.7-6.2 4.2-8.1 7.4-1.9 3.2-2.8 7-2.8 11.4 0 4.3.9 8 2.7 11 1.8 3 4.3 5.4 7.5 7.1 3.2 1.7 6.9 3.2 11.1 4.5 2.6.8 4.7 1.7 6.4 2.6 1.7 1 3 2.1 3.8 3.4.8 1.3 1.3 2.9 1.3 4.8 0 2.2-.6 4-1.9 5.5-1.3 1.5-3.1 2.6-5.3 3.3-2.2.7-4.8 1.1-7.7 1.1-3.7 0-6.9-.7-9.7-2.1s-4.9-3.5-6.4-6.3l-10.4 6.3zM49.4 48.7H13.6v12h14.5v54.7h13.4V60.7h7.9v-12z"
+                fill="#FFF" />
             </svg>
             <span>TS</span>
           </div>
@@ -176,17 +187,22 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      
+
       <div class="about-grid">
         <div class="about-card main-about">
           <p>
-            I am a Computer Science and Engineering undergraduate at <strong>United International University (UIU)</strong>, consistently recognized with merit scholarships for academic distinction (<strong>3.77 CGPA</strong>).
+            I am a Computer Science and Engineering undergraduate at <strong>United International University
+              (UIU)</strong>, consistently recognized with merit scholarships for academic distinction (<strong>3.77
+              CGPA</strong>).
           </p>
           <p>
-            My passion lies in backend development, software architecture, and system design. Whether building transactional web systems with <strong>Java & Spring Boot</strong>, creating full-stack PHP/MySQL platforms, or developing real-time algorithms, I take pride in writing clean, well-tested, and maintainable code.
+            My passion lies in backend development, software architecture, and system design. Whether building
+            transactional web systems with <strong>Java & Spring Boot</strong>, creating full-stack PHP/MySQL platforms,
+            or developing real-time algorithms, I take pride in writing clean, well-tested, and maintainable code.
           </p>
           <p>
-            I thrive in collaborative team environments, enjoy solving challenging algorithmic problems, and am actively looking for an opportunity to contribute as a junior software engineer or developer intern.
+            I thrive in collaborative team environments, enjoy solving challenging algorithmic problems, and am actively
+            looking for an opportunity to contribute as a junior software engineer or developer intern.
           </p>
         </div>
 
@@ -223,7 +239,7 @@
     <div class="container">
       <h2 class="section-title">Education</h2>
       <div class="timeline">
-        
+
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -237,7 +253,8 @@
             <ul>
               <li>Multiple recipient of UIU Academic Merit Waivers (25% & 50%).</li>
               <li>Currently maintaining an active 50% Merit Scholarship waiver based on high semester GPA.</li>
-              <li>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), System Analysis & Design, Software Engineering, Machine Learning.</li>
+              <li>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management
+                Systems (DBMS), System Analysis & Design, Software Engineering, Machine Learning.</li>
             </ul>
           </div>
         </div>
@@ -252,7 +269,8 @@
             <h3>Higher Secondary Certificate (HSC)</h3>
             <h4>Rajshahi Govt. Model School & College</h4>
             <p class="cgpa"><strong>GPA: 5.00 / 5.00 (Golden / Perfect GPA)</strong></p>
-            <p class="hsc-details">Science Group – Strong mathematical, analytical, and foundational sciences background.</p>
+            <p class="hsc-details">Science Group – Strong mathematical, analytical, and foundational sciences
+              background.</p>
           </div>
         </div>
 
@@ -264,7 +282,7 @@
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Technical Skills</h2>
-      
+
       <div class="skills-grid">
         <div class="skill-category">
           <h3><i class="fas fa-code"></i> Programming Languages</h3>
@@ -336,11 +354,12 @@
     <div class="container">
       <div class="section-heading-wrapper">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Real-world applications showcasing system design, backend architectures, and full-stack development.</p>
+        <p class="section-subtitle">Real-world applications showcasing system design, backend architectures, and
+          full-stack development.</p>
       </div>
 
       <div class="projects-grid">
-        
+
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-header">
@@ -352,12 +371,16 @@
           <h3>KoPassenger – Smart Ride Sharing</h3>
           <p class="project-subtitle">Full-Stack Web System & Real-Time Logistics</p>
           <p class="project-description">
-            A comprehensive web-based ride-sharing and carpooling platform designed to match real-time routes, automate fare splitting, and provide scheduled commuting. Built with a strong emphasis on user trust and safety.
+            A comprehensive web-based ride-sharing and carpooling platform designed to match real-time routes, automate
+            fare splitting, and provide scheduled commuting. Built with a strong emphasis on user trust and safety.
           </p>
           <ul class="project-highlights">
-            <li><strong>Competition Honor:</strong> Awarded <strong>2nd Runner-Up</strong> at UIU System Analysis & Design Lab Competition.</li>
-            <li><strong>Safety Architecture:</strong> Integrated instant SOS emergency triggers and gender-based ride filtering.</li>
-            <li><strong>Backend Logic:</strong> Implemented verified user profiles, fare estimation formulas, and ride status updates.</li>
+            <li><strong>Competition Honor:</strong> Awarded <strong>2nd Runner-Up</strong> at UIU System Analysis &
+              Design Lab Competition.</li>
+            <li><strong>Safety Architecture:</strong> Integrated instant SOS emergency triggers and gender-based ride
+              filtering.</li>
+            <li><strong>Backend Logic:</strong> Implemented verified user profiles, fare estimation formulas, and ride
+              status updates.</li>
           </ul>
           <div class="project-tech">
             <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
@@ -383,12 +406,16 @@
           <h3>Enterprise E-Commerce Application</h3>
           <p class="project-subtitle">Software Engineering / Backend Architecture</p>
           <p class="project-description">
-            A scalable e-commerce platform built using Java and Spring Boot. Handles full transaction flows, product catalogs with categories, dynamic cart management, and authenticated user checkout.
+            A scalable e-commerce platform built using Java and Spring Boot. Handles full transaction flows, product
+            catalogs with categories, dynamic cart management, and authenticated user checkout.
           </p>
           <ul class="project-highlights">
-            <li><strong>Database Schema:</strong> Engineered normalized relational MySQL tables with referential integrity.</li>
-            <li><strong>Authentication & Security:</strong> Designed role-based user management (Customer / Admin) with secure session state.</li>
-            <li><strong>Order Lifecycle:</strong> Built checkout pipelines tracking cart items, invoices, and order status transitions.</li>
+            <li><strong>Database Schema:</strong> Engineered normalized relational MySQL tables with referential
+              integrity.</li>
+            <li><strong>Authentication & Security:</strong> Designed role-based user management (Customer / Admin) with
+              secure session state.</li>
+            <li><strong>Order Lifecycle:</strong> Built checkout pipelines tracking cart items, invoices, and order
+              status transitions.</li>
           </ul>
           <div class="project-tech">
             <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Thymeleaf</span><span>CSS3</span>
@@ -414,12 +441,16 @@
           <h3>Machine Learning & Algorithm Explorations</h3>
           <p class="project-subtitle">Data Science, Applied ML & DSA</p>
           <p class="project-description">
-            A repository of analytical problem-solving implementations encompassing predictive machine learning models, statistical data preprocessing, and competitive data structure solutions.
+            A repository of analytical problem-solving implementations encompassing predictive machine learning models,
+            statistical data preprocessing, and competitive data structure solutions.
           </p>
           <ul class="project-highlights">
-            <li><strong>Predictive Modeling:</strong> Implemented supervised classification and regression workflows in Python.</li>
-            <li><strong>Data Pipelines:</strong> Performed feature engineering, data normalization, and evaluation metrics visualization.</li>
-            <li><strong>DSA Solutions:</strong> Optimized algorithms for graph traversal, dynamic programming, and search trees.</li>
+            <li><strong>Predictive Modeling:</strong> Implemented supervised classification and regression workflows in
+              Python.</li>
+            <li><strong>Data Pipelines:</strong> Performed feature engineering, data normalization, and evaluation
+              metrics visualization.</li>
+            <li><strong>DSA Solutions:</strong> Optimized algorithms for graph traversal, dynamic programming, and
+              search trees.</li>
           </ul>
           <div class="project-tech">
             <span>Python</span><span>Pandas</span><span>Scikit-Learn</span><span>C++</span><span>DSA</span>
@@ -440,12 +471,13 @@
     <div class="container">
       <h2 class="section-title">Achievements & Recognition</h2>
       <div class="achievements-grid">
-        
+
         <div class="achievement-card">
           <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
           <h3>2nd Runner-Up Award</h3>
           <p class="achievement-sub">UIU System Analysis & Design Competition</p>
-          <p>Recognized for designing and building <em>KoPassenger</em>, evaluated on architectural design, UI usability, and real-world viability.</p>
+          <p>Recognized for designing and building <em>KoPassenger</em>, evaluated on architectural design, UI
+            usability, and real-world viability.</p>
         </div>
 
         <div class="achievement-card">
@@ -459,7 +491,8 @@
           <div class="achievement-icon"><i class="fas fa-star"></i></div>
           <h3>Active 50% Scholarship</h3>
           <p class="achievement-sub">Ongoing CSE Undergrad Recognition</p>
-          <p>Currently maintaining a continuous 50% tuition merit waiver reflecting consistent top-tier academic rigor.</p>
+          <p>Currently maintaining a continuous 50% tuition merit waiver reflecting consistent top-tier academic rigor.
+          </p>
         </div>
 
       </div>
@@ -471,13 +504,14 @@
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <div class="contact-wrapper">
-        
+
         <div class="contact-info">
           <h3>Let's Connect</h3>
           <p>
-            I am actively seeking <strong>software engineering internships</strong>, <strong>junior developer roles</strong>, and collaborative open-source opportunities. Reach out via email, phone, or LinkedIn!
+            I am actively seeking <strong>software engineering internships</strong>, <strong>junior developer
+              roles</strong>, and collaborative open-source opportunities. Reach out via email, phone, or LinkedIn!
           </p>
-          
+
           <div class="info-item">
             <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="info-text">
@@ -534,7 +568,8 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Hi Kobir, I would love to connect with you regarding..." required></textarea>
+            <textarea id="message" rows="5" placeholder="Hi Kobir, I would love to connect with you regarding..."
+              required></textarea>
           </div>
           <button type="submit" class="btn primary-btn submit-btn">
             <i class="fas fa-paper-plane"></i> Send Message
@@ -564,17 +599,20 @@
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/CSkobir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/Hasibul-Hassan-Kobir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/CSkobir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/Hasibul-Hassan-Kobir" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:Kobirhassan5152@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
       <p>&copy; 2026 MD Hasibul Hassan KOBIR. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
+
 </html>

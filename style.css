@@ -36,8 +36,8 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   
   /* Profile Photo Zoom & Framing Controls */
-  --profile-zoom: 1.15;      /* Increase or decrease picture zoom: 1.0 (normal), 1.2, 1.3, etc. */
-  --profile-focus-y: 20%;   /* Vertical alignment: 15% (face focus), 50% (dead center) */
+  --profile-zoom: 1.0;       /* 1.0 = fill circle perfectly; increase for tighter face crop */
+  --profile-focus-y: 15%;    /* 0% = very top, 15% = face focus, 50% = dead centre */
 }
 
 html {
@@ -428,6 +428,7 @@ body {
   border: 1.5px dashed rgba(147, 197, 253, 0.22);
   animation: rotate-orbit 55s linear infinite;
   pointer-events: none;
+  will-change: transform;
 }
 
 .orbit-ring-inner {
@@ -444,18 +445,20 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Central Profile Circle with Auto-Zoom & Framing */
+/* Central Profile Circle — perfectly fitted, glowing border ring */
 .profile-circle {
-  width: 230px;
-  height: 230px;
+  width: 232px;
+  height: 232px;
   border-radius: 50%;
   position: relative;
   z-index: 5;
-  padding: 5px;
+  /* 4px gradient ring */
+  padding: 4px;
   background: linear-gradient(135deg, #38bdf8, #2563eb, #9333ea);
   box-shadow: 0 0 35px rgba(37, 99, 235, 0.45), 0 0 70px rgba(56, 189, 248, 0.25);
   animation: pulse-glow 4s ease-in-out infinite alternate;
   overflow: hidden;
+  will-change: box-shadow;
 }
 
 @keyframes pulse-glow {
@@ -467,22 +470,34 @@ body {
   }
 }
 
+/* Inner white donut that sits between the gradient ring and the photo */
+.profile-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #0f172a;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .profile-circle img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center var(--profile-focus-y, 20%);
-  transform: scale(var(--profile-zoom, 1.15));
-  transform-origin: center var(--profile-focus-y, 20%);
   display: block;
+  /* Fill the circle fully, anchored to the face (top-centre area) */
+  object-fit: cover;
+  object-position: center var(--profile-focus-y, 15%);
+  /* Slight scale to remove any white gap caused by border-radius rounding */
+  transform: scale(var(--profile-zoom, 1.0));
+  transform-origin: center top;
   background-color: var(--primary-light);
-  border: 3px solid #0f172a;
   transition: transform 0.4s ease;
 }
 
 .profile-circle:hover img {
-  transform: scale(calc(var(--profile-zoom, 1.15) + 0.06));
+  transform: scale(calc(var(--profile-zoom, 1.0) + 0.05));
 }
 
 /* Orbiting Tech Badge Items */
